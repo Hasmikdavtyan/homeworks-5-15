@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <script>
+   let inp = document.getElementsByTagName("input")[0]
+   
+   
+   inp.onkeydown= function  (event) {
+          if(event.code == "KeyN"){
+          alert(" N և n տառերը չի թույլատրվում կիրառել")
+          return false
+           }
+   }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+       p{
+        display: inline-block;
+       
+      }
+    </style>
+    <div> 
+    <input type="password">
+    <p >
+    
+    </p>
+   
+    </div>
+    <script>
+        let inp = document.querySelector('input')
+        
+        let count = 0
+        inp.addEventListener("keydown",myFunc)
+
+         function myFunc(event){
+        if (  event.key>= 'a' && event.key <= 'z' || event.key>= 'A' && event.key<= 'Z'  ) {     
+         count++    // էս հատվածում կասեք պայմանը ոնց կազմեմ, որ enter, space, capslok ու նման կոճակները չհաշվի, != տարբերակով փորձել եմ չաշխատեց
+         console.log(count)
+          }
+         if(count <= 3   ){
+            
+            document.getElementsByTagName('p')[0].innerHTML='weak'
+        }  
+         if(count > 3){
+            document.getElementsByTagName('p')[0].innerHTML='normal'
+
+       }  
+       if( count > 3 && event.shiftKey && event.code== 'Digit1' || event.shiftKey && event.code== 'Digit2' ){
+        
+        document.getElementsByTagName('p')[0].innerHTML='strong'
+        return false
+
+
+       }
+        }
+
+        
+
+    </script>
+</body>
+</html>

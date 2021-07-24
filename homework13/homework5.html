@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <style>
+      .dropdown-content {
+       visibility: hidden;
+
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 25px;
+         z-index: 1;
+
+      } 
+    </style>
+    <input type="text">
+    <div class="dropdown-content">
+        <p >   91 </p>
+        <p > 93 </p>
+        <p > 94 </p>
+        <p >95 </p>
+        <p>98 </p>
+        <p > 99</p>
+          
+      </div>
+    <script>
+            let inp = document.querySelector('input')
+            let drpDown = document.getElementsByClassName('dropdown-content')[0]
+            inp.onkeydown = function  (event){
+                 if(event.key == 'Backspace'){
+                   return   inp.value.slice(-1,1)
+                 }
+                 if(inp.value.length == 0  ){
+                  return event.key ==0
+                } else if( inp.value.length == 1 ){
+                  drpDown.style.visibility = 'visible'
+                  return false
+
+                }  else if (inp.value.length == 9){
+                   
+                   return   false
+                     
+                }
+                 else if( inp.value.length > 2){
+
+                    return event.key >=0 && event.key <=9 
+
+
+                }
+                
+
+            }
+
+            drpDown.addEventListener('click', myFunc )
+            function myFunc (event){
+                  inp.value += event.target.innerHTML.trim()
+                  drpDown.style.visibility = 'hidden'
+
+            }
+
+
+    </script>
+</body>
+</html>

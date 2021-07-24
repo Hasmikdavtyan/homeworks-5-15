@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="table" >
+       <tr >
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+       </tr>
+       <tr>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+       </tr>
+       <tr>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+       </tr>
+       <tr>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+       </tr>
+       <tr>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+       </tr>
+       <tr>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+       </tr>
+       <tr>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+           <td>cell</td>
+       </tr>
+    </table>
+
+    <script>
+        let table = document.getElementById("table")
+       for (let i = 0 ; i< table.rows.length; i ++){
+        table.rows[i].cells[table.rows.length-1-i].innerHTML = i
+       }
+    </script>
+</body>
+</html>

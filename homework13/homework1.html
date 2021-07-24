@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style> 
+    div{
+       width: 200px;
+       padding: 5px;
+       margin-left: 40%; 
+        background-color:aqua;
+    }
+
+    </style>
+     <form action="">
+         <input type="text">
+         <input type="text">
+         <input type="text">
+     </form>
+
+     <div hidden >  Thanks for message </div>
+
+    <script>
+        let form = document.querySelector("form")
+        let div =document.getElementsByTagName("div")[0]
+        document.addEventListener("keydown", event =>{
+          if( event.code =="KeyM" &&  event.ctrlKey){
+              form.hidden = true
+              div.hidden = false
+
+          } else if ( event.code =="KeyZ" &&  event.ctrlKey){
+              form.hidden = false
+              div.hidden = true
+
+          }
+        })
+
+
+    </script>
+</body>
+</html>

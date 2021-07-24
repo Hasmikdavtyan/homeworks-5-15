@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ["hallo", 15, "you", true, 12]
+
+      let elem1 = document.createElement("ul")
+      document.body.appendChild(elem1)
+
+       for(let i = 0; i<arr.length; i++){
+        let li =  document.createElement("li")
+        elem1.appendChild(li).innerHTML = arr[i]
+      }
+
+      setTimeout(function (){
+          let p = prompt()
+         arr.unshift(p)
+         console.log(arr)
+         let newLi =  document.createElement("li")
+        newLi.innerHTML = p
+        
+         elem1.prepend(newLi)
+          //elem1.insertAdjacentHTML("beforebegin", P)
+      }, 2000)
+    </script>
+</body>
+</html>

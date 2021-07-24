@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=" "> 
+    <input type="text">
+    <input type="text" disabled>
+    </form>
+    <script>
+    let form = document.forms[0]
+    let inp1 = form.elements[0]
+    let inp2 = form.elements[1]
+
+    inp1.onkeydown = function (event){
+       let  value =  inp1.value.trim()
+       console.log(value.length)
+    if (value.length>0){
+        inp2.disabled = false
+    }
+    }
+
+    </script>
+</body>
+</html>

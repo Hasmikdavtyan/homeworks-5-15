@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="div">  
+   <input id= "name" type="text" >
+   <input id= "email" type="email">
+   <input  id = "password" type="password">
+   <button onclick="submit()"> submit  </button>
+
+</div> 
+
+
+    <script>
+       
+    
+   function submit (){
+     let name =   document.getElementById("name")
+     let regex = /^[a-zA-Z0-9 ]+$/
+     if (regex.test(name.value)){
+         name.style.backgroundColor = "green"
+     }else{
+        name.value = " "
+        name.style.backgroundColor = "red"
+
+     }
+
+     let email = document.getElementById("email")
+
+      let regex1 = /@/
+      let regex2 = new RegExp("\\.")
+     if( regex1.test(email.value) && regex2.test(email.value) ){
+        email.style.backgroundColor = "green"
+
+     }else {
+        email.value = " "
+        email.style.backgroundColor = "red"
+     }
+
+    let password = document.getElementById("password")
+     let length = password.value.length
+     console.log(length)
+      
+     let regex3 = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/
+     console.log(password.value)
+
+       console.log(regex3.test(password.value))
+      if( length > 6  && regex3.test(password.value) ){
+      password.style.backgroundColor = "green"
+}     else {
+       password.value = " "
+       password.style.backgroundColor = "red"
+}
+   
+   let div = document.getElementById("div")
+   if (password.style.backgroundColor == "green" &&  email.style.backgroundColor =="green" &&     name.style.backgroundColor == "green"){
+      div.style.visibility = 'hidden'
+   }
+
+   }
+     
+    </script>
+</body>
+</html>

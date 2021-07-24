@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// task 1
+/*
+        let obj = {
+            name: "John", 
+            lastname:'Smith',
+        }
+let descriptor = Object.getOwnPropertyDescriptor(obj, "lastname")     
+//console.log(JSON.stringify(descriptor))
+Object.defineProperty(obj, "lastname", {writable: false})
+let descriptor2 = Object.getOwnPropertyDescriptor(obj, "lastname")     
+console.log(descriptor2)
+*/
+// task 2
+/*
+function objConstructor  (name, lastName, age, gender) {
+    this.name = name,
+    this.lastName =lastName,
+    this.age = age,
+    this.gender = gender
+}
+
+ let personOne = new objConstructor("john","Smith", 45 , 'male')
+ let personTwo = new objConstructor("Helen","Smith", 34 , 'female')
+ console.log(personOne)
+ console.log(personTwo)
+*/
+// task 3 
+/*
+var obj ={
+    name: "Anna",
+    eyeColor:"blue"
+}
+
+var obj2 ={
+    name: "Sergey",
+    
+}
+
+obj2.__proto__ = obj
+alert(obj2.eyeColor)
+*/
+
+// task 4
+/*
+function Person  (name, lastName, nationality, gender) {
+    this.name = name,
+    this.lastName =lastName,
+    this.nationality = nationality,
+    this.gender = gender
+}
+
+Person.prototype.age = 24
+Person.prototype.fullName = function(){
+   return this.name + " " + this.lastName
+}
+let men = new Person("Armen", "Galstyan", "armenian", "male")
+let women = new Person("Ani", "Gasparyan", "armenian", "female")
+
+
+console.log(women.age)
+console.log(men.fullName())
+*/
+// task 5
+/*
+String.prototype.FirstTwoLetterUpperCase = function(){
+      for( let i= 0; i< this.length; i++){
+          if (i< 2){
+             var a =  this.slice(this[i],2)
+              a = a.toUpperCase()
+              var secondPart = this.slice(2, this[length-2])
+              var word = a + secondPart
+          }
+         return word
+      }}
+   
+let word = prompt("only words accepted")
+alert(word.FirstTwoLetterUpperCase())
+*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" >
+        <input type="checkbox" name="box" value = "red" checked >
+        <label for=""> red</label>
+
+        <input type="checkbox"  name="box"  value = "green" checked>
+        <label for=""> green</label>
+
+
+        <input type="checkbox"  name="box"  value = "blue" checked >
+        <label for=""> blue</label>
+
+        <button> click me </button>
+
+    </form>
+
+    <script>
+        let form = document.forms[0]
+        let btn = document.getElementsByTagName('button')[0]
+        let inp = document.querySelectorAll("input[name='box']")
+        console.log(inp)
+
+
+       
+       btn.addEventListener('click', formAction)
+      
+      function formAction(){
+        event.preventDefault()
+
+          inp.forEach(el=>{
+              if (!el.checked){
+                  el.checked = true
+              }else{
+                el.checked = false
+              }
+          })
+      }
+
+      
+       
+       
+
+    </script>
+    
+</body>
+</html>

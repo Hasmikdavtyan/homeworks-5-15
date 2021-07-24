@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button>  click me  </button>
+    <script>
+      let btn = document.getElementsByTagName('button')[0]
+      
+      btn.onclick= function(){
+       let obj ={
+           height:screen.height,
+           width: screen.width
+       }
+       alert(` the screenwidth is : ${screen.width}, and the screenheight is: ${screen.height}`)
+
+      }
+    </script>
+</body>
+</html>

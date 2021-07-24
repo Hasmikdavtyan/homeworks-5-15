@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<a href="http://sunnyschool.am/">SUNNY SCHOOL</a>
+    <script type="text/javascript">
+       
+     let a  = document.getElementsByTagName('a')[0]
+     
+
+       a.addEventListener('click', function (e) {
+             
+             let question =    window.confirm("open a new page?")
+            
+             if (question) {
+                window.open("https://sunnyschool.am/","sunnyschool" )
+              } else{
+                location.assign("https://sunnyschool.am/")
+              }
+			    
+			});
+		
+
+    </script>
+</body>
+</html>

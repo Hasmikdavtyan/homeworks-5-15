@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  
+    button{
+        width:50px;
+        height: 18px;
+        
+    }
+    </style>
+</head>
+<body>
+    <input id ='id' type="text"  >   </input>
+    <button onclick="myFunc()"></button>
+    <p id = 'p'>   </p>
+
+    <script>
+       function myFunc () {
+    let inp = document.getElementById('id')
+    let p = document.getElementById('p')
+     
+     p.innerHTML = inp.value
+      console.log(p.innerHTML.length)
+    
+     if(p.innerHTML.length < 4){
+         p.style.color = 'red'
+
+     }else {
+        p.style.color = 'green'
+
+     }
+       }
+
+     
+     
+     
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <input  id ="input" type="text"  >   </input>
+  <button >  click me </button>
+
+    
+    <script>
+           let btn = document.querySelector("button")
+           btn.style.width= "60px"
+           btn.style.height= "33px"
+
+
+          let elem =  document.getElementById("input")
+           btn.addEventListener("click", handler)
+    
+    function handler  (){
+     let check1= elem.value.indexOf("@")
+     let check2= elem.value.indexOf(".")
+     console.log( check1, check2)
+     if ((check1>=0) && (check2>=0)){
+       alert("yes")
+     }else{
+       alert("no")
+     }
+
+    }
+
+    
+
+
+    </script>
+</body>
+</html>

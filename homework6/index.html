@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id ="demo"></p>
+    <script>
+
+// task1
+ /*
+ var d = new Date(1e12)
+alert(d)
+*/
+// task2
+/*
+var d = new Date() - new Date().setHours(0,0,0)
+var sec = (d)/1000
+alert(d)
+/*
+var hours = new Date().getHours()
+var minute = new Date().getMinutes()
+var sec = new Date().getSeconds()
+alert(hours)
+alert(minute)
+alert(sec)
+var  sum = sec + minute*60 + hours*3600
+alert(sum)
+*/
+// task 3
+/*
+let year = Math.floor(Math.random() * (2020-1919)+1919)
+let month = Math.floor(Math.random() * 12)
+let day = Math.floor(Math.random() * 31)
+date = new Date(year,month,day)
+
+alert(year) 
+let obj = {
+    name: "Armen",
+    lastName:"Manukyan",
+    func: function(){
+      var currentDay = new Date()
+      var dif = currentDay - date
+      return  Math.floor(dif/ 31536000000) // millisecods in a year
+      
+    }
+
+}
+
+alert(obj.func())
+*/
+//task4
+/*
+var start = new Date()
+ for(let i = 0; i<=10000000; i++){
+    var pow = i**1000
+ }
+var end = new Date()
+var time = end- start
+alert(` for loop takes ${time}` )
+*/
+/*
+let whileStart = new Date()
+let j = 1
+ while(j < 10000000){
+     var newPow=j**1000
+ }
+let whileEnd = new Date()
+var whileTime = whileEnd - whileStart
+alert(whileTime)*/
+
+// task 5
+ 
+/*
+ const myFunc = (first, next)=>{
+    var myword = first
+    
+     let interval = setInterval(()=>{
+      document.write(myword + "<br>")
+      myword++
+      if (myword== next){
+        clearInterval(interval)
+    }
+     }, 1000)
+    
+    
+ }
+
+ myFunc(10, 30)
+ */
+    </script>
+
+</body>
+</html>

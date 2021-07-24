@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="home">
+      <h1>  Home </h1>
+     </div>
+     
+     <div >
+<p>   Sunny School is non profit organisation
+
+</p>
+     </div>
+
+    
+     <span>    Sunny School
+     </span>
+    
+    
+    <script>
+        let count = 0
+        let node = document.body.childNodes
+    
+     for ( let i =0; i< node.length; i++){
+           let text =node[i].textContent.indexOf("Sunny School")
+         
+       if ( text >= 0){
+           alert(node[i].nodeName)
+         
+           count +=1
+        }
+        
+     }
+
+     //console.log(document.body.childNodes.length)
+     alert(` the count of this word is ${count}`)
+
+    </script>
+</body>
+</html>

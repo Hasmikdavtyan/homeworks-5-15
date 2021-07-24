@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+  <style>  
+    button{
+        width:50px;
+        height: 18px;
+        
+    }
+    </style>
+     
+    <input id='frst' type="text">
+    <button onclick ="myFunc()" >  </button>
+    <input id ='scnd' type="text" >
+    
+
+    <script>
+      let elem1 =  document.getElementById('frst')
+      let elem2 = document.getElementById('scnd')
+      elem2.style.visibility = 'hidden'
+      console.log(elem1.value)
+
+      function myFunc (){
+          console.log(elem1.value.length)
+        if (elem1.value.length > 6){
+            elem2.style.visibility = 'visible'
+      } else{
+        elem2.style.visibility = 'hidden'
+
+      }
+      }
+
+      
+        
+    </script>
+</body>
+</html>

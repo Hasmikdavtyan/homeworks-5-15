@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        form{
+            background-color: aqua;
+            width:70%;
+           
+            margin-left:18%;
+        }
+
+        .form2{
+            visibility: hidden;
+        }
+       .loginBtn {
+            margin-top: 25px;
+            margin-left:45%;
+        
+        }
+        .signupbtn{
+            margin-top: 25px;
+            margin-left:45%; 
+        }
+
+        h1{
+            margin-left: 40%;
+        }
+    </style>
+    
+    <form  class="form1" action=""  style="border:1px solid #ccc">
+        <div class="container">
+          <h1>Sign Up</h1>
+         
+          <hr>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+           <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </form>
+
+
+
+      <form class="form2" action="welcome.html" style="border:1px solid #ccc">
+        <div class="container">
+          <h1>Log In</h1>
+         
+          <hr>
+      
+          <label for="emeil"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="emeil" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw1" required>
+           <button type="login" class="loginBtn">LOG IN </button>
+        </div>
+      </form>
+
+      <script>
+          let registerForm = document.forms[0]
+          let btn = document.getElementsByClassName('signupbtn')[0]
+          let email = document.getElementsByName('email')[0]
+          let password = document.getElementsByName('psw')[0]
+          let loginForm = document.forms[1]
+          let loginEmail = document.getElementsByName('emeil')[0];
+          let loginPassword = document.getElementsByName('psw1')[0]
+          let loginBtn = document.getElementsByClassName('loginBtn')[0]
+          let obj = {
+               email: '',
+               psw: ''
+           }
+
+          btn.addEventListener('click', checkFunk)
+            
+          function checkFunk(event){
+           event.preventDefault()
+           let regex =   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+              if( regex.test(email.value) && password.value.length>6){
+                obj.email = email.value
+                obj.psw = password.value
+                     console.log(  obj.email,  obj.psw ) 
+                    } else{
+                  alert('not valid email or password')
+              }
+
+              if( obj.email!= ''){
+               
+                 loginForm.style.visibility = 'visible'
+                 registerForm.style.visibility = 'hidden'
+
+              
+          }
+
+ }
+
+            
+           loginBtn.addEventListener('click', function (event)  {
+             event.preventDefault()
+            if(loginEmail.value.trim() == obj.email.trim() && password.value.trim()== loginPassword.value.trim() ){
+                loginForm.submit()
+                } else {
+                  alert('email or password is wrong')
+
+                }
+
+          })
+
+
+      </script>
+</body>
+</html>

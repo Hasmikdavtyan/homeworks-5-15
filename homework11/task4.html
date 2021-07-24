@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+var obj={
+  id:"first",
+  tagN:"p",
+  content:"Sunny School"
+}
+
+ let coment = document.createComment(new Date)
+document.body.appendChild(coment)
+console.log(coment)
+
+ let elem = document.createElement(obj.tagN)
+ elem.setAttribute("id", obj.id)
+ elem.setAttribute("id", obj.id)
+elem.innerHTML = obj.content
+document.body.appendChild(elem)
+
+
+    </script>
+</body>
+</html>

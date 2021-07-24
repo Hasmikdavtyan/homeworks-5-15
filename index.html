@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Task 1
+    /*
+    let num = [12,56,-89,4,0,-78,-5,456]
+    let orderedNum = num.sort((a,b)=>{
+         return b-a
+    })
+    alert(orderedNum)
+    */
+
+    // task 2
+    /*
+    let IT = ["WEB","C++", "Python","C#","Java"]
+    let str = IT.join("<=>" )
+     alert(str)
+     alert(typeof str)
+     */
+
+     // task 3 
+     /*
+      let arr =[];
+    const ranDom = (min, max)=>{
+     return Math.floor(Math.random()*(max-min))+min
+    }
+
+     for (let i=0; i< ranDom(1,50) ; i++){
+        var num = ranDom(-100,100)
+         arr.push(num)
+         
+         
+     }
+    alert(arr)
+    alert(arr[ranDom(0,arr.length-1)])
+    */
+
+    // task 4 
+
+    /*
+    let arr = []
+    let str = []
+     for (let i= 0; i< 7; i++){
+        var num = prompt("Say anything")
+        if((!isNaN(num)) && num>0){
+         arr.push(num)
+        } else{
+            str.push(num)
+        }
+     }
+      
+     alert(arr)
+     alert(str)
+ */
+
+ // task 5
+ let arr =[];
+    const ranDom = (min, max)=>{
+     return Math.floor(Math.random()*(max-min))+min
+    }
+
+     for (let i=0; i< 20 ; i++){
+        var num = ranDom(1,100)
+         arr.push(num)
+     }
+
+    let newArrMinOne= arr.map((el)=>{
+      return el -1
+
+     })
+     
+     let arrFind = newArrMinOne.filter((el)=>{
+       return  el%2==0
+
+         
+     })
+     let includeValues = arrFind.includes((el)=>{
+       return  el == 0 || el == 10 || el == 20 || el == 30 || el == 40
+     })
+
+     alert(arr)
+     alert(newArrMinOne) 
+     alert(arrFind) 
+     alert(includeValues)
+
+    </script>
+</body>
+</html>

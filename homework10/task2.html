@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Home   </p>
+    <p> About   </p>
+    <p> Contact us   </p>
+    <p> Registration   </p>
+    <p>   LOG in  </p>
+
+    <script>
+     var arr = []
+     let main = document.getElementsByTagName("p")
+     for(let i =0; i<main.length; i++){
+       let text =   document.getElementsByTagName("p")[i].innerHTML
+         arr.push(text)
+     }
+     console.log(arr)
+
+    </script>
+</body>
+</html>

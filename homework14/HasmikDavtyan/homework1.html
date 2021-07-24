@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+    <a href="https://sunnyschool.am/"> sunnyschool.am </a>
+    
+    <script>
+        
+        let a  = document.getElementsByTagName('a')[0]
+
+       // window.addEventListener('load', check)
+        window.addEventListener('beforeunload', myFunc)
+        
+        
+
+        function myFunc(event){
+              event.preventDefault()
+              let loadDate = new Date()
+
+              let leftDate = new Date()
+              let date = ( leftDate - loadDate )/1000
+              if ( date >= 10){
+                event.returnValue= ""
+              }
+              
+             
+        }
+
+
+        // էստեղ չի ստացվում կանգնեցնել ռեդիրեքթը, չի հասցնում դեյթը հաշվել, սխալը չգտա
+
+    </script>
+    
+</body>
+</html>
